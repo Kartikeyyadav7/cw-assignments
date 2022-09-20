@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Form Validation</title>
+	</head>
+
+	<body>
+		<form id="form">
+			<h2>Sign Up</h2>
+			<div class="form-control">
+				<label for="userName" id="label-name">Username : </label>
+				<input
+					type="text"
+					title="UserName should be between 3 and 25 characters"
+					id="userName"
+					minlength="3"
+					maxlength="25"
+					placeholder="username"
+				/>
+				<div class="instructions_username">
+					Username should be between 3 and 25 characters
+				</div>
+			</div>
+			<div class="form-control">
+				<label for="email" id="label-email">Email : </label>
+				<input type="email" id="email" placeholder="Email" />
+				<div class="instructions_email">Email should not be empty</div>
+			</div>
+
+			<div class="form-control">
+				<label for="Password" id="label-password">Password : </label>
+				<div class="password_container">
+					<input
+						type="password"
+						id="password"
+						title="Password must have at least 8 characters that include atleast 1 lowercase character , 
+                        1 uppercase character, 1 number and 1 special character in (!@#$%^&*)"
+						placeholder="password"
+						pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+					/>
+					<i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+				</div>
+
+				<div class="instructions_password">
+					Password must have at least 8 characters that include atleast 1
+					lowercase character , 1 uppercase character, 1 number and 1 special
+					character in (!@#$%^&*)
+				</div>
+			</div>
+			<div class="form-control">
+				<label for="ConfirmPassword" id="label-ConfirmPassword"
+					>Confirm Password :
+				</label>
+				<div class="password_container">
+					<input
+						type="password"
+						id="ConfirmPassword"
+						placeholder="Reenter your password"
+					/>
+					<i class="fa-solid fa-eye-slash" id="toggleConfPassword"></i>
+				</div>
+				<div class="instructions_confirmPassword">Enter the password again</div>
+			</div>
+
+			<button type="submit" value="submit" id="submit">SIGN UP</button>
+		</form>
+
+		<div id="signupModal" class="modal">
+			<div class="modal-content">
+				<div class="modal_container">
+					<div class="dynamic">You are signed up</div>
+					<span class="close">&times;</span>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

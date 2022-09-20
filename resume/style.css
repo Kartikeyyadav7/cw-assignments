@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto";
+	line-height: 1.6;
+	font-size: 1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.left_container {
+	position: relative;
+	padding: 20px;
+}
+
+.right_container {
+	position: relative;
+	padding: 40px;
+}
+
+.profile_img img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+
+.heading_profile {
+	margin-top: 1rem;
+}
+
+.name {
+	font-size: 3rem;
+}
+
+.profession {
+	font-size: 1.5rem;
+}
+
+.prof_name {
+	margin-top: 2rem;
+}
+
+.work_experience {
+	margin-top: 6.5rem;
+}
+
+.position {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.education_details {
+	margin-top: 2rem;
+}
+
+.name_hidden {
+	display: none;
+}
+
+.prof_role {
+	display: none;
+}
+
+.education {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.circle_icon {
+	font-size: 0.9rem;
+}
+
+.position_name {
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.skills {
+	margin-top: 2rem;
+}
+
+.skill_category {
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.name_hidden {
+		display: block;
+		text-align: center;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+
+	.prof_name {
+		display: none;
+	}
+
+	.prof_role {
+		display: block;
+		text-align: center;
+		font-weight: 500;
+		font-size: 1.5rem;
+	}
+
+	.left_container {
+		padding: 15px;
+	}
+
+	.heading_profile {
+		text-align: center;
+	}
+
+	.profile_summary {
+		text-align: center;
+	}
+
+	.address {
+		text-align: center;
+	}
+
+	.personal_details {
+		text-align: center;
+	}
+
+	.skills {
+		text-align: center;
+	}
+
+	.right_container {
+		padding: 15px;
+		margin-top: -5rem;
+	}
+
+	.profile_img {
+		text-align: center;
+	}
+	.project {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.position {
+		margin-bottom: 1rem;
+	}
+
+	.position_name {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.position_icon {
+		display: none;
+	}
+
+	ul {
+		list-style: circle;
+	}
+
+	.education_header {
+		text-align: center;
+	}
+
+	.circle_icon {
+		display: none;
+	}
+
+	.personal_details ul {
+		list-style: none;
+	}
+}
