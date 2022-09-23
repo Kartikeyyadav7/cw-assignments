@@ -17,7 +17,9 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                products: action.payload,
+                products: [...state.products, ...action.payload],
+                // products: ([...all])
+                // products: action.payload,
             };
 
         default:

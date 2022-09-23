@@ -3,16 +3,15 @@ import "../Styles/Card.css"
 
 function Card({ cardImg, email, firstName, lastName }) {
     return (
-        <div class="img-card icard">
-            <div class="card-content">
-                <div class="card-image">
-
+        <div className="img-card icard">
+            <div className="card-content">
+                <div className="card-image">
                     <img src={cardImg} alt='car' />
                 </div>
 
-                <div class="card-text">
+                <div className="card-text">
                     <p>{email}</p>
-                    <span class="card-title">{firstName}</span>
+                    <span className="card-title">{firstName}</span>
                     <div>{lastName}</div>
                 </div>
 

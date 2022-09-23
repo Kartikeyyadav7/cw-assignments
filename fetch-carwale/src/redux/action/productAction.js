@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { GET_PRODUCTS, PRODUCT_LOADING } from "../type";
 
-export const getProducts = () => (dispatch) => {
+export const getProducts = (pageNumber) => (dispatch) => {
     dispatch(setLoadingProduct());
     axios
-        .get("https://reqres.in/api/users/")
+        .get(`https://reqres.in/api/users/?page=${pageNumber}`)
         .then((res) => {
             dispatch({
                 type: GET_PRODUCTS,
